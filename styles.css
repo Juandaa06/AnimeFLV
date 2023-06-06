@@ -1,0 +1,1558 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F2F2F2;
+}
+
+header{
+    background-color: #2F353A;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    border-bottom: 3px solid #01BCF3;
+    text-align: center;
+    align-items: center;
+}
+
+.logo{
+    width: 40%;
+}
+
+.logo img{
+    width: 50%;
+}
+
+/*Estilos de la barra de navegación*/
+
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.nav ul{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.nav ul li a{
+    padding-right: 1.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.nav ul li a:hover{
+    color: #ddd;
+}
+
+.nav ul .pink a{
+    color: #FF79C8;
+    opacity: 1;
+}
+
+.nav ul .pink a:hover{
+    color: #f354b1;
+}
+
+.nav ul .pink a span{
+    color: white;
+    font-size: 0.8rem;
+    background-color: #FF79C8;
+    border-radius: 8px;
+    position: relative;
+    top: -18px;
+    right: 12px;
+}
+
+.nav ul .pink a:hover span{
+    background-color: #f354b1;
+}
+
+.nav input{
+    padding: 0.55rem 0;
+    background-color: #242628;
+    border-radius: 16px;
+    border: 1.5px solid #2F353A;
+    font-size: 0.9rem;
+}
+
+.nav input::placeholder {
+    text-indent: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav .bi-search{
+    color: white;
+    position: relative;
+    right: 2rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.nav input:hover{
+    background-color: #1e2022;
+    box-shadow: 0px 0px 3px 0px;
+    color: white;
+}
+
+.nav button{
+    cursor: pointer;
+    padding: 0.56rem 0.6rem;
+    border-radius: 8px;
+    background-color: #312d2d;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.nav button:hover{
+    background-color: rgb(62, 62, 62);
+    border: 1px solid #01BCF3;
+}
+
+/*Algunos estilos del main*/
+
+main{
+    max-width: 1200px;
+    padding-top: 7rem;
+    padding-left: 3.5rem;
+    padding-right: 2.5rem;
+    background-color: #F2F2F2;
+}
+
+.main{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+}
+
+/*Mensaje de la parte superior de la pagina*/
+
+.mensaje{    
+    text-align: center;
+    color: rgb(249, 233, 233);
+    letter-spacing: -1px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBY9vqTLETgoOM7Pn9JftA85RJbPywYs9AxoCyRG2X5eQ-gUwi);
+    padding: 10px 10px;
+    border-radius: 5px;
+    border-bottom: 3px solid #01bcf3;
+    margin-bottom: 2.5rem;
+    box-shadow: inset 0 0 25px rgba(0,0,0,.5);
+}
+
+/*Estilos de la lista de animes que están a la izquierda de la pantalla*/
+
+.lista-animes{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: white;
+    float: left;
+    padding-bottom: 0;
+    max-height: 2400px;
+}
+
+.lista-animes .title{
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.enunciado .title i{
+    font-size: 1.5rem;
+    padding-left: 4rem;
+    color: orange;
+    background-color: white;
+}
+
+.lista-animes ul{
+    padding: 20px 10px 10px 15px;
+    font-size: 15px;
+}
+
+.lista-animes li a{
+    display: flex;
+    text-align: center;
+    padding-bottom: 25px;
+    opacity: 0.7;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.lista-animes li a i{
+    font-style: normal;
+    margin-right: 10px;
+}
+
+.lista-animes i {
+    color: white;
+    background-color: #aaa;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-animes .emision{
+    font-size: 10px;
+    background-color: #01BCF3;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.2rem 0.2rem;
+    opacity: 0.7;
+    position: relative;
+    text-align: end;
+    margin-left: auto;   
+}
+
+.lista-animes li a:hover {
+    color: #01BCF3;
+}
+
+.lista-animes li a:hover i{
+    color: white;
+    background: #01BCF3;
+    opacity: 1;
+}
+
+.lista-animes li a:hover span{
+    opacity: 1;
+    background-color: #01BCF3;
+}
+
+/*Estilos del titulo llamada "últimos episodios" y el hoy*/
+
+.ultimos .title{
+    padding-bottom: 1.5rem;
+    display: flex;
+}
+
+.ultimos .title p{
+    padding-top: 4px;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+}
+
+.ultimos .title a{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: white;
+    background-color: #01BCF3;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.4rem;
+    height: 1.8rem;
+    position: relative;
+    top: 4px;
+    text-align: end;
+    margin-left: auto;
+}
+
+.ultimos .title a:hover{
+    background-color: #00b2e9;
+    font-size: 14px;
+    transition: 0.5s ease-in-out;
+}
+
+.ultimos .title a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #01BCF3; 
+}
+
+.ultimos .title a:hover::before{
+    transform: scale(2.1) rotate(180deg);
+    left: 45%;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid #00b2e9;
+}
+
+/*estilos de los capitulos de anime que han salido más recientes*/
+
+.ultimos .content ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.ultimos .content img{
+    position: relative;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1;
+    transition: 0.6s ease;
+}
+
+
+.ultimos .content a {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.ultimos .content a:hover img{
+    filter: brightness(60%);
+}
+
+.ultimos .content a p{
+    position: absolute;
+    font-size: 14px;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 6px;
+    color: white;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    z-index: 2;
+    background-color: #2F353A;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+}
+
+.ultimos .content a:hover p{
+    color: white;
+    bottom: 0;
+    background-color: transparent;
+    font-size: 15px;
+    transition: 0.5s ease;
+}
+
+.ultimos .content a:not(:hover) p{
+    transition: 0.5s  ease-in-out;
+}
+
+.ultimos .content .bi-play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 40px;
+    color: white;
+    transition: transform 1s ease;
+}
+
+.ultimos .content a:hover .bi-play {
+    color: #ff8000;
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+
+.ultimos .content .episodio{
+    z-index: 3;
+    font-size: 10px;
+    background-color: #FF7E00;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.2rem 0.2rem;
+    position: absolute;
+    bottom: 22px;
+    left: 5px;
+}
+
+.ultimos .content a:hover .episodio{
+    font-size: 8px;
+    bottom: 80%;
+    transition: 1s ease;
+}
+
+.ultimos .content a:not(:hover) span{
+    transition: 0.5s ease-in-out;
+}
+
+/*Estilos del titulo de animes*/
+
+.animes .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animes .title .bi-window{
+    font-size: 2rem;
+    Color: #FF7E00; 
+}
+
+.animes .title p{
+    padding-left: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.animes  .title a {
+    text-align: center;
+    width: 5rem;
+    letter-spacing: -0.5px;
+}
+
+.animes .title a:hover {
+    font-size: 0.85rem;
+    letter-spacing: -1px;
+}
+
+/*Estilos extras de los animes*/
+
+.animes{
+    padding-bottom: 4rem;
+}
+
+.animes .content li{
+    padding: 5px 5px 30px;
+    border: 2px transparent;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.animes .content a p{
+    color: black;
+    font-size: 0.8rem;
+    background-color: transparent;
+    position: absolute;
+    bottom: -30px;
+}
+
+.animes .content a:hover p{
+    color: black;
+    bottom: -30px;
+}
+
+.animes .content .estreno{
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #01ae43;
+    z-index: 2;
+    letter-spacing: -1px;
+}
+
+.animes .content a:hover .estreno {
+    background-color: #038836;
+}
+
+.animes .content .pelicula, .anime{
+    z-index: 3;
+    font-size: 9px;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.2rem 0.2rem;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    position: absolute;
+}
+
+.animes .content .anime{
+    background-color: #01BCF3;
+}
+
+.animes .content a:hover .anime{
+    background-color: #00b2e9;
+}
+
+.animes .content .pelicula{
+    background-color: #FD3246;
+}
+
+.animes .content a:hover .pelicula{
+    background-color: #ff1241;
+}
+
+/*Estilos del footer*/
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    background-color: #3b4248;
+    color: #777f82;
+}
+
+.footer .datos {
+    font-size: 0.9rem;
+}
+
+.footer .datos p{
+    padding-bottom: 10px;
+}
+
+.footer .datos strong{
+    color: white;
+}
+
+.footer .datos .list ul{
+    display: flex;
+}
+
+.footer .datos .list li{
+    background-color: #292E32;
+    padding: 6px 3px;
+    border-radius: 8px;
+}
+
+.footer .datos .list li a{
+    color: white;
+    letter-spacing: -0.9px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.footer .datos .list li a:hover{
+    text-decoration: underline;
+}
+
+.footer .redes{
+    display: flex;
+    align-items: center;
+    padding-right: 5rem;
+}
+
+.footer .redes a{
+    padding-right: 2rem;
+    align-items: center;
+}
+
+.footer .redes .bi-facebook,
+.footer .redes .bi-youtube{
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.footer .redes i{
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #292E32;
+    width: 2rem;
+    height: 2rem;
+}
+
+.footer .redes .bi-facebook:hover{
+    color: #1877F2;
+    background-color: white;
+}
+
+.footer .redes .bi-youtube:hover{
+    color: #FF0000;
+    background-color: white;
+}
+
+/*TODAS LAS MEDIA QUERIES*/
+
+@media (max-width: 320px){
+
+    /*Header*/
+
+    header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 100%;
+        padding-bottom: 0.5rem;
+    }
+    
+    .navbar {
+        display: none;
+    }
+    
+    .nav input {
+        padding: 0.3rem;
+        width: 100px;
+    }
+    
+    .nav button:hover {
+        border: none;
+    }
+
+    /*main*/
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .main{
+        left: 0;
+        padding-top: 1.5rem;
+    }
+
+    /*Título/ Mensaje de Arriba*/
+
+    .mensaje{    
+        text-align: center;
+        font-size: 8px;
+    }
+
+    /*Lista de anime*/
+
+    .lista-animes{
+        display: flex;
+    }
+
+    .lista-animes .title{
+        padding: 10px;
+    }
+
+    .lista-animes ul{
+        padding: 15px 10px 5px 10px ;
+    }
+
+    .lista-animes li a{
+        padding-bottom: 20px;
+    }
+
+    /*Estilos del título de los ultimos episodios*/
+
+    .ultimos .title p{
+        font-size: 1.3rem;
+    }
+    
+    .ultimos .title a{
+        font-size: 11px;
+        width: 3rem;
+        height: 1.4rem;
+    }
+
+    /*Capitulos más recientes*/
+
+    .ultimos .content ul{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .ultimos .content a p{
+        font-size: 10px;
+    }
+
+    .ultimos .content a:hover p{
+        font-size: 11px;
+    }
+
+    .ultimos .content .episodio{
+        font-size: 8px;
+        padding: 0.15rem 0.15rem;
+        bottom: 17px;
+        left: 2px;
+    }
+
+    .ultimos .content a:hover .episodio{
+        font-size: 6px;
+    }
+
+    /*Estilos del titulo de animes*/
+
+    .animes .title{
+        padding-top: 1.5rem;
+    }
+
+    .animes .title .bi-window{
+        font-size: 1.2rem;
+    }
+
+    .animes .title p{
+        font-size: 1.2rem;
+    }
+
+    .animes .title a{
+        display: none;
+    }
+
+    /*Estilos extras de los animes*/
+
+    .animes .content li{
+        padding: 5px 0px 12px 0px;
+        border: 2px transparent;
+        border-radius: 8px;
+        background-color: white;
+        height: 80%;
+    }
+
+    .animes .content a p{
+        bottom: -18px;
+        font-size: 0.7rem;
+    }
+
+    .animes .content .estreno{
+        padding: 3px 6px;
+        font-size: 8px;
+        letter-spacing: -0.5px;
+        left: 12px;
+    }
+
+    .animes .content .pelicula, .anime{
+        font-size: 8px;
+        bottom: 2px;
+        padding: 0.18rem 0.25rem;
+        left: 12px;
+    }
+
+    /**/
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+
+    .footer .datos{
+        font-size: 0.75rem;
+    }
+
+    .footer .datos .list li{
+        padding: 3px;
+        border-radius: 5px;
+    }
+
+    .footer .datos .list li a{
+        font-size: 0.5rem;
+        letter-spacing: 0;
+    }
+
+    .footer .redes{
+        padding-top: 6px;
+        padding-right: 0;
+    }
+    
+    .footer .redes .bi-facebook,
+    .footer .redes .bi-youtube{
+        font-size: 1rem;
+    }
+
+    .footer .redes i {
+        width: 1.5rem;
+        height: 1.5rem;
+    }   
+}
+
+@media (min-width: 321px) and (max-width: 677px){
+
+        /*Header*/
+        
+        header {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 100%;
+            padding-bottom: 0.5rem;
+        }
+        
+        .navbar {
+            display: none;
+        }
+        
+        .nav input {
+            padding: 0.3rem;
+            width: 100px;
+        }
+        
+        .nav button:hover {
+            border: none;
+        }
+    
+        /*main*/
+    
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 9rem;
+        }
+    
+        .main{
+            left: 0;
+            padding-top: 0;
+        }
+    
+        /*Título/ Mensaje de Arriba*/
+    
+        .mensaje{    
+            text-align: center;
+            font-size: 9.5px;
+            margin-bottom: 1.5rem;
+        }
+    
+        /*Lista de anime*/
+    
+        .lista-animes{
+            display: none;
+        }
+    
+        /*Estilos de los ultimos episodios*/
+    
+        .ultimos .title p{
+            font-size: 1.4rem;
+        }
+        
+        .ultimos .title a{
+            font-size: 14px;
+            width: 3rem;
+            height: 1.5rem;
+        }
+    
+        /*Capitulos más recientes*/
+    
+        .ultimos .content ul{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        .ultimos .content a p{
+            font-size: 11.5px;
+        }
+    
+        .ultimos .content a:hover p{
+            font-size: 12px;
+        }
+    
+        .ultimos .content .episodio{
+            font-size: 9.8px;
+            padding: 0.15rem 0.15rem;
+            bottom: 19px;
+            left: 4px;
+        }
+    
+        .ultimos .content a:hover .episodio{
+            font-size: 8.5px;
+        }
+    
+        /*Estilos del titulo de animes*/
+    
+        .animes .title{
+            padding-top: 1.5rem;
+        }
+    
+        .animes .title .bi-window{
+            font-size: 1.4rem;
+        }
+    
+        .animes .title p{
+            font-size: 1.4rem;
+        }
+    
+        .animes .title a{
+            display: none;
+        }
+
+        
+        /**/
+        .footer{
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-top: 30px;
+        }
+    
+        .footer .datos{
+            font-size: 0.75rem;
+        }
+        
+        .footer .datos ul{
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer .datos .list li{
+            padding: 3px;
+            border-radius: 5px;
+        }
+    
+        .footer .datos .list li a{
+            font-size: 0.5rem;
+            letter-spacing: 0;
+        }
+    
+        .footer .redes{
+            padding-top: 6px;
+            padding-right: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .footer .redes .bi-facebook,
+        .footer .redes .bi-youtube{
+            font-size: 1rem;
+        }
+    
+        .footer .redes i {
+            width: 1.5rem;
+            height: 1.5rem;
+        }   
+}
+
+@media (min-width: 678px) and (max-width: 768px){
+    
+        /*Header*/
+        
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50%;
+            padding-bottom: 0rem;
+        }
+        
+        .nav ul .pink{
+            padding-left: 0.7rem;
+        }
+
+        .nav ul .pink a span{
+            top: -14px;
+            font-size: 0.68rem;
+        }
+
+        .nav ul{
+            font-size: 0.8rem;
+        }
+
+        .nav ul li a{
+            padding-right: 0.7rem;
+        }
+
+        .nav input {
+            padding: 0.35rem;
+            width: 100px;
+        }
+        
+        .nav button{
+            font-size: 0.7rem;
+            padding: 0.48rem 0.5rem;
+        }
+
+        .nav button:hover {
+            border: none;
+        }
+    
+        /*main*/
+    
+        main{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 5rem;
+        }
+    
+        .main{
+            left: 20px;
+            padding-right: 20px;
+            padding-top: 0;
+        }
+    
+        /*Título/ Mensaje de Arriba*/
+    
+        .mensaje{    
+            text-align: center;
+            font-size: 10.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        /*Lista de anime*/
+    
+        .lista-animes{
+            max-width: 250px;
+        }
+
+        .lista-animes .title{
+            padding: 15px 10px;
+            font-size: 0.9rem;
+        }
+
+        .enunciado .title i{
+            font-size: 1.3rem;
+        }
+
+        .lista-animes ul{
+            padding: 15px 8px 10px 8px;
+            font-size: 0.8rem;
+        }
+
+        .lista-animes i{
+            width: 0.95rem;
+            height: 0.95rem;
+        }
+
+        .lista-animes .emision{
+            font-size: 8.5px;
+        }
+
+        /*Estilos de los ultimos episodios*/
+    
+        .ultimos .title p{
+            font-size: 1.5rem;
+        }
+        
+        .ultimos .title a{
+            font-size: 14px;
+            width: 3rem;
+            height: 1.5rem;
+        }
+    
+        /*Capitulos más recientes*/
+    
+        .ultimos .content ul{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        .ultimos .content a p{
+            font-size: 14px;
+        }
+    
+        .ultimos .content a:hover p{
+            font-size: 15px;
+        }
+    
+        .ultimos .content a:hover .episodio{
+            font-size: 10px;
+        }
+    
+        /*Estilos del titulo de animes*/
+    
+        .animes .title{
+            padding-top: 1.5rem;
+        }
+    
+        .animes .title .bi-window{
+            font-size: 1.5rem;
+        }
+    
+        .animes .title p{
+            font-size: 1.5rem;
+        }
+        
+        .animes .title a{
+            letter-spacing: -0.2px;
+            font-size: 11px;
+            width: 4rem;
+            height: 1.5rem;
+        }
+
+        /**/
+        .footer{
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-top: 30px;
+        }
+    
+        .footer .datos{
+            font-size: 0.75rem;
+        }
+        
+        .footer .datos ul{
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer .datos .list li{
+            padding: 3px;
+            border-radius: 5px;
+        }
+    
+        .footer .datos .list li a{
+            font-size: 0.5rem;
+            letter-spacing: 0;
+        }
+    
+        .footer .redes{
+            padding-top: 6px;
+            padding-right: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .footer .redes .bi-facebook,
+        .footer .redes .bi-youtube{
+            font-size: 1rem;
+        }
+    
+        .footer .redes i {
+            width: 1.5rem;
+            height: 1.5rem;
+        }   
+}
+
+@media (min-width: 769px) and (max-width: 840px) {
+
+        /*Header*/
+        
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50%;
+            padding-bottom: 0rem;
+        }
+        
+        .nav ul .pink{
+            padding-left: 0.7rem;
+        }
+
+        .nav ul .pink a span{
+            top: -14px;
+            font-size: 0.68rem;
+        }
+
+        .nav ul{
+            font-size: 1rem;
+        }
+
+        .nav ul li a{
+            padding-right: 0.7rem;
+        }
+
+        .nav input {
+            padding: 0.35rem;
+            width: 100px;
+        }
+        
+        .nav button{
+            font-size: 0.7rem;
+            padding: 0.48rem 0.5rem;
+        }
+
+        .nav button:hover {
+            border: none;
+        }
+    
+        /*main*/
+    
+        main{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 5rem;
+        }
+    
+        .main{
+            left: 20px;
+            padding-right: 20px;
+            padding-top: 0;
+        }
+    
+        /*Título/ Mensaje de Arriba*/
+    
+        .mensaje{    
+            text-align: center;
+            font-size: 10.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        /*Lista de anime*/
+    
+        .lista-animes{
+            max-width: 250px;
+        }
+
+        .lista-animes .title{
+            padding: 15px 10px;
+            font-size: 0.9rem;
+        }
+
+        .enunciado .title i{
+            font-size: 1.3rem;
+        }
+
+        .lista-animes ul{
+            padding: 15px 8px 10px 8px;
+            font-size: 0.8rem;
+        }
+
+        .lista-animes i{
+            width: 0.95rem;
+            height: 0.95rem;
+        }
+
+        .lista-animes .emision{
+            font-size: 8.5px;
+        }
+
+        /*Estilos de los ultimos episodios*/
+    
+        .ultimos .title p{
+            font-size: 1.5rem;
+        }
+        
+        .ultimos .title a{
+            font-size: 14px;
+            width: 3rem;
+            height: 1.5rem;
+        }
+    
+        /*Capitulos más recientes*/
+    
+        .ultimos .content ul{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        .ultimos .content a p{
+            font-size: 14px;
+        }
+    
+        .ultimos .content a:hover p{
+            font-size: 15px;
+        }
+    
+        .ultimos .content a:hover .episodio{
+            font-size: 10px;
+        }
+    
+        /*Estilos del titulo de animes*/
+    
+        .animes .title{
+            padding-top: 1.5rem;
+        }
+    
+        .animes .title .bi-window{
+            font-size: 1.5rem;
+        }
+    
+        .animes .title p{
+            font-size: 1.5rem;
+        }
+        
+        .animes .title a{
+            letter-spacing: -0.2px;
+            font-size: 11px;
+            width: 4rem;
+            height: 1.5rem;
+        }
+
+        /**/
+        .footer{
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-top: 30px;
+        }
+    
+        .footer .datos{
+            font-size: 0.75rem;
+        }
+        
+        .footer .datos ul{
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer .datos .list li{
+            padding: 3px;
+            border-radius: 5px;
+        }
+    
+        .footer .datos .list li a{
+            font-size: 0.5rem;
+            letter-spacing: 0;
+        }
+    
+        .footer .redes{
+            padding-top: 6px;
+            padding-right: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .footer .redes .bi-facebook,
+        .footer .redes .bi-youtube{
+            font-size: 1rem;
+        }
+    
+        .footer .redes i {
+            width: 1.5rem;
+            height: 1.5rem;
+        } 
+}
+
+@media (min-width: 841px) and (max-width: 1024px) {
+
+    /*Header*/
+    
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 50%;
+        padding-bottom: 0rem;
+    }
+    
+    .nav ul .pink{
+        padding-left: 0.7rem;
+    }
+
+    .nav ul .pink a span{
+        top: -14px;
+        font-size: 0.68rem;
+    }
+
+    .nav ul{
+        font-size: 1rem;
+    }
+
+    .nav ul li a{
+        padding-right: 0.7rem;
+    }
+
+    .nav input {
+        padding: 0.35rem;
+        width: 100px;
+    }
+    
+    .nav button{
+        font-size: 0.7rem;
+        padding: 0.48rem 0.5rem;
+    }
+
+    .nav button:hover {
+        border: none;
+    }
+
+    /*main*/
+
+    main{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 5rem;
+    }
+
+    .main{
+        left: 20px;
+        padding-right: 20px;
+        padding-top: 0;
+    }
+
+    /*Título/ Mensaje de Arriba*/
+
+    .mensaje{    
+        text-align: center;
+        font-size: 10.5px;
+        margin-bottom: 1.5rem;
+    }
+
+    /*Lista de anime*/
+
+    .lista-animes{
+        max-width: 250px;
+    }
+
+    .lista-animes .title{
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+
+    .enunciado .title i{
+        font-size: 1.3rem;
+    }
+
+    .lista-animes ul{
+        padding: 15px 8px 10px 8px;
+        font-size: 0.8rem;
+    }
+
+    .lista-animes i{
+        width: 0.95rem;
+        height: 0.95rem;
+    }
+
+    .lista-animes .emision{
+        font-size: 8.5px;
+    }
+
+    /*Estilos de los ultimos episodios*/
+
+    .ultimos .title p{
+        font-size: 1.5rem;
+    }
+    
+    .ultimos .title a{
+        font-size: 14px;
+        width: 3rem;
+        height: 1.5rem;
+    }
+
+    /*Capitulos más recientes*/
+
+    .ultimos .content ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ultimos .content a p{
+        font-size: 14px;
+    }
+
+    .ultimos .content a:hover p{
+        font-size: 15px;
+    }
+
+    .ultimos .content a:hover .episodio{
+        font-size: 10px;
+    }
+
+    /*Estilos del titulo de animes*/
+
+    .animes .title{
+        padding-top: 1.5rem;
+    }
+
+    .animes .title .bi-window{
+        font-size: 1.5rem;
+    }
+
+    .animes .title p{
+        font-size: 1.5rem;
+    }
+    
+    .animes .title a{
+        letter-spacing: -0.2px;
+        font-size: 11px;
+        width: 4rem;
+        height: 1.5rem;
+    }
+
+    /**/
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+
+    .footer .datos{
+        font-size: 0.75rem;
+    }
+    
+    .footer .datos ul{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .datos .list li{
+        padding: 3px;
+        border-radius: 5px;
+    }
+
+    .footer .datos .list li a{
+        font-size: 0.5rem;
+        letter-spacing: 0;
+    }
+
+    .footer .redes{
+        padding-top: 6px;
+        padding-right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer .redes .bi-facebook,
+    .footer .redes .bi-youtube{
+        font-size: 1rem;
+    }
+
+    .footer .redes i {
+        width: 1.5rem;
+        height: 1.5rem;
+    } 
+}
